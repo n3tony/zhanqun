@@ -21,7 +21,7 @@ fi
 echo -e "\033[33m是否安装过bbr,第一次建议选择 1 否则选择0，默认也不执行(BBR安装时间较久) \033[0m"&&read value
 if [ $value -eq 1 ]; then
     yum update
-    bash <(curl -s -L https://upload.117idc.net/socks5/bbr.sh)
+    bash <(curl -s -L https://raw.githubusercontent.com/n3tony/zhanqun/main/bbr.sh)
 
 fi
 
@@ -54,7 +54,7 @@ echo "脚本已修改"
    echo
    echo -e "\033[35m".........请耐心等待正在安装中........."\033[0m"
    echo 
-   bash <(curl -s -L https://upload.117idc.net/socks5/117w.sh)  t.txt >/dev/null 2>&1
+   bash <(curl -s -L https://raw.githubusercontent.com/n3tony/zhanqun/main/117w.sh)  t.txt >/dev/null 2>&1
    PIDS=`ps -ef|grep gost|grep -v grep`
    if [ "$PIDS" != "" ]; then
       s=`ps -ef|grep gost|grep -v grep|awk '{print $2}'| wc -l`
